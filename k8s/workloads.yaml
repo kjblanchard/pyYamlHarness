@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yaml-flask
+spec:
+  selector:
+    matchLabels:
+      app: yaml-flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yaml-flask
+    spec:
+      containers:
+      - name: yaml-flask
+        image: enf3rno/yamltemplate:test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yaml-nginx
+spec:
+  selector:
+    matchLabels:
+      app: yaml-nginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yaml-nginx
+    spec:
+      containers:
+      - name: yaml-nginx
+        image: enf3rno/nginx:test

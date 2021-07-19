@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  yaml-flask:
+    image: enf3rno/yamltemplate:test
+    command: gunicorn --bind 0.0.0.0:5000 frontend:app
+    expose:
+      - 5000
+  yaml-nginx:
+    image: enf3rno/nginx:test
+    ports:
+      - 1337:80
+    depends_on:
+      - yaml-flask
