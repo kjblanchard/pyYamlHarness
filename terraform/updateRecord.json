@@ -7,7 +7,7 @@
                             "Type": "A",
                             "AliasTarget":{
                                     "HostedZoneId": "Z3AADJGX6KTTL2",
-                                    "DNSName": "a8a3b11254b3e44ed9e6c97b9f2cc488-97446742.us-east-2.elb.amazonaws.com",
+                                    "DNSName": "templateValue",
                                     "EvaluateTargetHealth": false
                               }}
                           }]
